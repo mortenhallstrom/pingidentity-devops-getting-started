@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "iamaks99-d5d7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "iamaks99-d5d7"
+  template:
+    metadata:
+      labels:
+        app: "iamaks99-d5d7"
+    spec:
+      containers:
+        - name: "iamaks99-d5d7"
+          image: "iamgithub.azurecr.io/iamaks99"
+          ports:
+          - containerPort: 80
